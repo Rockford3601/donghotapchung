@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Pomodoro Timer</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@700&display=swap"
+      rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/15.3.5/Tone.min.js"></script>
+   <link rel="stylesheet" href="tc_css.css">
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-4">
+    <h1 class="chu_t1" style="text-align: center; color: yellow; font-size: 35px; font-family: 'Time New Roman' ">HỌC, HỌC NỮA, HỌC MÃI</h1>
+    <!-- Background image -->
+    
+    <img class="anh_tt" src= "https://www.pinclipart.com/picdir/big/39-395396_youtube-star-know-your-meme-doge-yellow-star.png" alt="anh_nen" width="15%" align="center" float="left">
+    
+        <img class="anh_tt2" src= "https://upload.wikimedia.org/wikipedia/commons/7/7a/Communist_Party_of_Vietnam_hammer_and_sicke.png" alt="anh_nen" width="15%" align="center" float="right">
+
+    
+    <!-- end background img-->
+   <div class="w-full max-w-sm mx-auto text-center relative z-10">
+
+      <main class="timer-container rounded-2xl p-6">
+         <div class="flex justify-around mb-6 relative z-10">
+            <button id="pomodoro-mode"
+               class="mode-button active py-2 text-sm font-semibold uppercase tracking-wider">TẬP CHUNG</button>
+         </div>
+
+         <!-- Timer Display with Progress Ring -->
+         <div id="timer-visual-container" class="relative w-64 h-64 mx-auto mb-6 flex items-center justify-center">
+            <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 100 100">
+               <!-- Decorative Rings -->
+               <circle id="ring-1" class="decorative-ring text-[color:rgba(255, 255, 255)]" stroke-width="1.7"
+                  stroke-dasharray="30 9" stroke="currentColor" fill="transparent" r="48" cx="50" cy="50" />
+               
+
+               <!-- Background Circle -->
+               <circle class="text-slate-700/50" stroke-width="5" stroke="currentColor" fill="transparent" r="42"
+                  cx="50" cy="50" />
+               <!-- Progress Circle -->
+               <circle id="progress-ring-circle" stroke-width="4" stroke-linecap="round" stroke="var(--glow-color)"
+                  fill="transparent" r="42" cx="50" cy="50"
+                  style="transform: rotate(-90deg); transform-origin: 50% 50%;" />
+            </svg>
+            <div class="z-10 relative">
+               <h2 id="time-display" class="text-6xl font-bold">25:00</h2>
+               <br>
+            </div>
+         </div>
+
+         <!-- Control Buttons -->
+         <div class="flex justify-center items-center space-x-4 relative z-10">
+            <button id="start-pause-button" class="font-bold py-3 px-8 rounded-full uppercase tracking-widest">
+               BẮT ĐẦU
+            </button>
+            <button id="reset-button" class="p-3 rounded-full">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 2v6h6" />
+                  <path d="M21 12A9 9 0 0 0 6 5.3L3 8" />
+                  <path d="M21 22v-6h-6" />
+                  <path d="M3 12a9 9 0 0 0 15 6.7l3-2.7" />
+               </svg>
+            </button>
+         </div>
+      </main>
+
+      <footer class="mt-8 text-slate-400/70 relative z-10">
+         <p style="text-align: center; color: yellow; font-size: 25px; font-family: 'Time New Roman' ">&copy;2025 <strong style="text-align: center; color: yellow; font-size: 25px; font-family: 'Time New Roman' ">Rockford3601</strong></p>
+      </footer>
+   </div>
+
+   <script src="clock.js"></script>
+</body>
+
+</html>
