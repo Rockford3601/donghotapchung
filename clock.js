@@ -83,7 +83,7 @@ window.onload = () => {
     }
 
     isRunning = true;
-    startPauseButton.textContent = 'PAUSE';
+    startPauseButton.textContent = 'DỪNG';
     timerVisualContainer.classList.add('timer-running');
 
     timerInterval = setInterval(() => {
@@ -97,7 +97,7 @@ window.onload = () => {
 
   function pauseTimer() {
     isRunning = false;
-    startPauseButton.textContent = 'START';
+    startPauseButton.textContent = 'BẮT ĐẦU';
     timerVisualContainer.classList.remove('timer-running');
     clearInterval(timerInterval);
   }
@@ -146,4 +146,5 @@ window.onload = () => {
   // Initial setup
   updateDisplay();
   updateActiveButton();
+
 };
